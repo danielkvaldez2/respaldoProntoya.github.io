@@ -1,0 +1,1011 @@
+/*
+  R E S E T (Por Eric Meyer)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td { margin: 0;  padding: 0; border: 0;  outline: 0; font-size: 100%;
+                                                  vertical-align: top;  }
+body                      { line-height: 1;}
+ol, ul                    { list-style: none;}
+blockquote, q             { quotes: none;}
+:focus                    { outline: 0;}
+ins                       { text-decoration: none;}
+del                       { text-decoration: line-through;}
+table                     { border-collapse: collapse;  border-spacing: 0; }
+a img                     { border:none }
+/*
+R E S E T (Por Eric Meyer)
+*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+body {
+    margin: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+	  background-color:#CE020E;
+    color: #F1F1F1;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+iframe:focus { 
+  outline: none;
+ pointer-events:none;
+}
+a{text-decoration: none;}
+/*-----Menu responsive con subcategorias de MBT modificado por Minerva Aurora----*/
+
+    #menu{
+    background: #9A0312;/* color de la barra #f1f1f1 */
+    color: #F1F1F1;/*color de las tres barritas 333*/
+    height: 45px;
+    border-bottom: 1px solid #E9E9E9;/* borde inferior de la barra*/
+    box-shadow: 1px 2px 9px #c6c6c6;/* sombra inferior de la barra*/
+    width:100%;
+    position:fixed;
+    top: 0px;
+    z-index:101; 
+    }
+    #menu ul,#menu li{
+    margin:0 auto;
+    padding:0 0;
+    list-style:none
+    }
+    #menu ul{
+    height:45px;
+    width:100%; /* ancho del menú, ajustar para centrarlo*/
+    }
+    #menu li{
+    float:left;
+    display:inline;
+    position:relative;
+    font: 11px Arial, sans-serif;/*tamaño y fuente del texto */
+    }
+    #menu a{
+    display: block;
+    line-height: 40px;
+    padding: 0 14px;
+    text-decoration: uppercase;
+    color: #f1f1f1;/*color del texto*/
+    text-transform: uppercase;/*letras mayúsculas*/
+    letter-spacing: 1.5px;/*espacio entre letras*/
+    }
+    #menu li a:hover{
+    color: #f1f1f1;/*color del texto al pasar el ratón*/
+    text-decoration: none;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    background: rgb(138, 188, 228);/*color del fondo de la categoria al pasar el ratón*/
+    }
+    #menu input{
+    display:none;
+    margin:0 0;
+    padding:0 0;
+    width:80px;
+    height:30px;
+    opacity:0;
+    cursor:pointer
+    }
+    #menu label{
+    font: 25px  Arial, sans-serif ;
+    font-weight: bold;
+    display:none;
+    width:35px;
+    height:35px;
+    line-height:43px;
+    text-align:center;
+    }
+    #menu label span{
+    font: 12px  Arial, sans-serif;/*tamaño y fuente del texto "menu" */
+    position:absolute;
+    left:35px;
+    text-transform:uppercase;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing:0.5px;
+    }
+    #menu ul.menus{
+    height: auto;
+    overflow: hidden;
+    width: 170px;
+    background: rgb(189, 80, 91);/*color del fondo del submenu*/
+    position: absolute;
+    z-index: 99;
+    display: none;
+    border: 1px solid #E9E9E9;
+    }
+    #menu ul.menus li{
+    display: block;
+    width: 100%;
+    font: 11px  Arial, sans-serif;/*tamaño y fuente del  texto del submenu*/
+    text-transform: uppercase;
+    border-bottom: 1px solid #E9E9E9;
+  
+     }
+    #menu ul.menus li:last-child{
+    border-bottom:none;
+    }
+    #menu ul.menus a{
+    color: #f1f1f1;/*color del  texto del submenu*/
+    line-height: 35px;
+    }
+    #menu li:hover ul.menus{
+    display:block
+    }
+    #menu ul.menus a:hover{
+    background: rgb(163, 193, 238);/*color del  fondo del submenu al pasar el ratón*/
+    color: #f1f1f1;/*color del  texto del submenu al pasar el ratón*/
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    }
+    @media screen and (max-width: 800px){
+    #menu{
+    position:fixed; 
+    z-index:101; 
+    }
+    #menu ul{
+    background:#ce020e;/*color del desplegable del menu movil*/
+    position:absolute;
+    top:100%;
+    right:0;
+    left:0;
+    z-index:3;
+    height:auto;
+    display:none
+    }
+    #menu ul.menus{
+    width:100%;
+    position:static;
+    padding-left:20px
+    }
+    #menu li{
+    display:block;
+    float:none;
+    width:auto;
+    font: 11px  Arial, sans-serif;
+     }
+    #menu a{
+     display: block;
+     line-height: 40px;
+     padding: 0 14px;/*tamaño y fuente del  menu movil*/
+    }
+    #menu input,#menu label{
+    position:absolute;
+    top:0;
+    left:0;
+    display:block
+    }
+    #menu input{
+    z-index:4
+    }
+    #menu input:checked + label{
+    color:#F1F1F1;/*color de las tres barritas una vez se clica*/
+    }
+    #menu input:checked ~ ul{
+    display:block
+    }
+    }
+/********************************************fin del menu         ***********************    */
+
+
+
+    .supply{
+        max-width: 100%;
+         
+        text-align: center;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+
+    /******************************************************************************************************************************/
+    /************************************ CAJA PRODUCTOS  ************************************/ 
+.productosCaja
+{
+	display:inline-block;
+    background: #f1f1f1;
+	width: 125px;
+	min-height: 150px;
+	margin-bottom:18px;margin-left: 7px;
+	position: relative;
+	font-family: 'Ubuntu', sans-serif;
+	border-radius: 5px;
+	border: thin solid white;
+	box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+ /* opacity: 0.8; */
+ box-sizing:border-box;
+}
+.productosCaja:hover{
+  transform: scale(1.5,1.5);
+  /*transform: rotate(4deg) ;*/
+  z-index: 9;
+  border:thin solid #9A0312;
+  cursor:pointer;
+  opacity: 1;
+}
+
+.cajatitulo{
+  top:0;border-radius: 5px 5px 0px 0px;
+  width: 100%; height: 25px; 
+
+  background: #d49e9e;
+  background: -moz-linear-gradient(#9A0312 0%, #d49e9e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9A0312), color-stop(100%, #d49e9e));
+  background: -webkit-linear-gradient(#9A0312 0%, #d49e9e 100%);
+  background: linear-gradient(#9A0312 0%, #d49e9e 100%);
+
+  color:white;/*#44AB8B*/
+}
+.titulo
+{ 
+	font-size:.6em;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+  padding-top: 5px;
+}
+.foto
+{
+   width: 100%; height: 70px;padding-top: 5px;
+}
+.importe
+{	 
+  width: 100%; height: 25px;
+	font-weight: bold;
+	font-size:.6em;
+	color: #000;
+  /*text-shadow: 1px 1px 3px rgba(0,0,0,.8);*/
+}
+.importe > span{
+  display: block;
+  padding:2px;
+  width:80px;
+  background: #f1f1f1; /*orange;*/
+  color: black; 
+  border-radius: 0 20px 20px 0;
+    border: thin solid white;
+    box-shadow:inset 0px 1px 3px rgba(0,0,0,.7), 0 2px 4px rgba(0,0,0,.9);
+}
+.comprar {
+    width: 100%; height: 25px;
+    bottom: 0px;
+    border-radius: 0px 0px 5px 5px;
+
+  
+    background: #d49e9e;
+    background: -moz-linear-gradient(#9A0312 0%, #d49e9e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9A0312), color-stop(100%, #d49e9e));
+    background: -webkit-linear-gradient(#9A0312 0%, #d49e9e 100%);
+    background: linear-gradient(#9A0312 0%, #d49e9e 100%);
+  
+   /*#0F553E; color de abajo */
+
+    color: #FFF;
+    z-index: 0;
+}
+.prosesosTxt {color:black;font-size: .7em}
+.inputNumber{font-size: 8px;width: 30px;background: white;color:black;text-align: center;vertical-align:middle;}
+.inputNumber:hover{ cursor: pointer;}
+.antesCarrito
+{
+  font-size: .4em;width: 47%; height: 25px;float: left;padding-top:1px; /*background-color: blue;*/
+}
+.antescCarrito
+{
+  width: 29%; height: 25px;float: left;font-size: .6em;/*background-color: green;*/
+}
+.antescCarrito>a>img:hover{width: 24px;height: 24px;}
+
+#cantidad
+{
+  width: 25px;
+}
+
+.carritoRojo
+{
+  position: absolute;
+  z-index: 3;
+  top:127px;left: 100px;
+  width: 20px;height: 20px;
+}
+.carritoRojo:hover
+{
+ left: 95px;top:117px; width: 30px;height:30px;
+}
+/* ************* FIN CAJA PRODUCTOS  ******************* */ 
+
+#IrArriba span
+{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/botonTop.png);
+}
+#IrArriba span:hover
+{
+  transform: scale(1.2, 1.2);
+}
+
+/* ************************************** */
+
+/************************************ FIN CAJA PRODUCTOS  ************************************/
+
+
+/******************************** tabla carrito *****************/
+
+  table {width:100%; margin: auto;font-size: 0.8em; }
+  table, th, td {border: 1px solid white; border-collapse: collapse;}
+  th, td {padding: 3px}
+  table#t01 tr:nth-child(even) {background-color: #DCECF1; color: black}
+  table#t01 tr:nth-child(odd) { background-color:#FFFFFF; color: black}
+  table#t01 th{background-color: #DCECF1; color: white;}
+  /******************************** tabla carrito *****************/
+
+/************************************ proseso detalle compra **************************/
+.tituloCarritoProseso{
+  position: fixed;z-index: 2;
+   display: block;
+   font-family: 'Ubuntu';
+   color:white;
+   width: 98%;
+   padding: 3px;
+   background: #9A0312;
+   text-align: center;
+   font-size:12px;
+   text-shadow: 1px 1px 3px rgb(0, 0, 0,.7);
+   margin-bottom: 5px;
+   box-sizing:border-box;
+}
+
+.carritoProseso{
+    display: block;
+    background:#dcecf1;
+    color:black;
+    width: 100%;
+    height: 70px;
+    font-size: 16px;
+   /* text-shadow: 1px 1px 3px rgb(0, 0, 0,.7);*/
+    border-left: 1px solid #000;
+    margin-bottom: 5px;
+    padding: 5px;
+    box-sizing:border-box;
+   
+}
+.carritoProseso:hover {
+    -webkit-box-shadow: inset 1px 1px 2px 3px rgba(0, 0, 0, .8);
+    box-shadow:  inset 1px 1px 4px 2px rgba(0, 0, 0, .8);
+
+}
+.fotoProseso{
+    display: inline-block;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0,.7);
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    background: white;
+    vertical-align:top;
+}
+.contentProseso{
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    overflow: hidden;
+   /* background: yellow;*/
+    position: relative;
+}
+       
+.importeProseso{
+    display: inline-block;
+    width: 45px;
+    height: 50px;
+    overflow: hidden; /*background: blue;*/
+    font-size: 12px;
+    padding-top: 15px;
+    box-sizing:border-box;background:rgba(25,70,33,.05);
+}
+.cantidadProseso{
+    display: inline-block;
+    width: 20px;
+    height: 50px;
+    overflow: hidden; /*background: green;*/
+     font-size: 12px;
+    padding-top: 15px;
+    box-sizing:border-box;
+    
+}
+.subtotalProseso{
+    display: inline-block;
+    width: 45px;
+    height: 50px;
+    overflow: hidden;/*background: purple;*/
+    font-size: 14px;
+    padding-top: 15px;
+    box-sizing:border-box;background:rgba(25,70,33,.05);
+
+}
+.borraProseso{ 
+    display: inline-block;
+    width: 20px;
+    height: 50px;
+    overflow: hidden;/*background: purple;*/
+    padding-top: 15px;
+    box-sizing:border-box;
+    vertical-align: top;
+}
+.totalComprarProseso{
+    /*position: absolute;top:5px;*/
+    display: block;/*background-color: pink;*/
+    color: rgb(0, 0, 0,.8);
+    width: 100%;
+    height: 70px;
+    font-size: 16px;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0,.7);
+}
+.comprarProsseso {
+    position: fixed;top:45px;left:0px;z-index: 3;
+    display: inline-block; /*background: red;*/
+    width: 65%;
+    height: 45px; 
+    padding-top: 10px;
+    margin-top: 10px;
+    text-align: left;
+    box-sizing:border-box;
+}
+.totalProseso {  
+   position: fixed;
+   top:51px;
+   right:16px;
+   z-index: 3;
+    display: inline-block; 
+    width: 20%;
+    height: 45px;
+    font-size: 16px;
+    background: #9a0312;
+    color:white;
+    padding-top: 10px;
+    margin-top: 10px;
+    vertical-align: top;
+    box-sizing:border-box;
+      text-shadow: 0 -1px 1px #000000;
+}
+
+
+
+ .tituloProseso{
+        padding:2px;
+            width: 100%;
+            height: 14px;
+            font-family: 'Ubuntu';
+            font-size: 12px;
+            text-shadow: 1px 1px 3px rgb(0, 0, 0,.7);/*background: red;*/
+            box-sizing:border-box;
+            text-align: left;
+            text-transform: uppercase; 
+             border-bottom: 1px solid white;
+             overflow: hidden;
+        }
+    
+
+        .marcaProseso {
+
+            padding:5px;
+            width: 100%;
+            height: 14px;
+            font-family: 'Ubuntu';
+            font-size: 7px;
+            overflow: hidden;
+            box-sizing:border-box;
+            text-align: left;
+            text-transform: capitalize;
+            /*text-transform: lowercase; minusculas */
+            border-bottom: 1px solid white;
+        }
+       
+         
+        .detalleProseso{
+          padding:2px;
+            width: 100%;
+            height: 40px;
+            font-family: 'Ubuntu';
+            font-size: 8px;/*background: blue;*/
+            box-sizing:border-box;
+            text-align: left;
+            text-transform: capitalize;
+            overflow: hidden;
+        }
+      
+
+        
+        /* ***************************************clases especiales ************************************************************/
+.giro{display:block;width: 155px; height: 155px; z-index: 200;  }
+
+
+.giro2:hover {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+	-webkit-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+}
+.fade {
+	-webkit-transition: all 0.9s ease-in;
+	-ms-transition: all 0.9s ease-in;
+	-moz-transition: all 0.9s ease-in;
+	-o-transition: all 0.9s ease-in;
+	transition: all 0.9s ease-in;
+	/*opacity: 1;
+	-moz-opacity: 1;
+	filter:alpha(opacity=10);*/
+}
+.fade:hover {
+	-webkit-transition: all 0.9s ease-out;
+	-ms-transition: all 0.9s ease-out;
+	-moz-transition: all 0.9s ease-out;
+	-o-transition: all 0.9s ease-out;
+	transition: all 0.9s ease-out;
+/*	opacity: 0.7;
+	-moz-opacity: 0.7;
+	filter:alpha(opacity=7);*/
+}
+ 
+.redonda {
+	border-radius: .7em; /*XX px / 16 px */
+	box-shadow: 5px 5px 10px rgba(255,255,255,.5);
+}
+.demoFADE {
+  opacity:0;
+  filter:alpha(opacity=0);
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+/* ***************************************clases especiales ************************************************************/
+
+
+/******  -* ****************** *****************  botonX prueba  *********************************/
+
+.buttonx, .buttonx span {
+  display: inline-block;
+  -webkit-border-radius: 1px;   /* cambiar bordes redondeados */
+  -moz-border-radius: 1px;   /* cambiar bordes redondeados */
+  border-radius: 1px;   /* cambiar bordes redondeados */
+}
+.buttonx {
+  white-space: nowrap;
+  line-height:1em;
+  position:relative;
+  outline: none;
+  overflow: visible; 
+  cursor: pointer;
+  border: 1px solid #999;
+border: rgba(0, 0, 0, .2) 1px solid;
+  border-bottom:rgba(0, 0, 0, .4) 1px solid;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  background: -moz-linear-gradient(
+     center top,
+     rgba(255, 255, 255, .1) 0%,
+     rgba(0, 0, 0, .1) 100%
+  );
+  background: -webkit-gradient(
+     linear,
+     center bottom,
+     center top,
+     from(rgba(0, 0, 0, .1)),
+     to(rgba(255, 255, 255, .1))
+  );
+  -moz-user-select: none;
+  -webkit-user-select:none;
+  -khtml-user-select: none;
+  user-select: none;
+  margin-bottom:1px;/*margin-bottom:10px;*/
+}
+.buttonx.full, .buttonx.full span {
+  display: block;
+}
+.buttonx:hover, .buttonx.hover {
+  background: -moz-linear-gradient(
+     center top,
+     rgba(255, 255, 255, .2) 0%,
+     rgba(255, 255, 255, .1) 100%
+  );
+  background: -webkit-gradient(
+     linear,
+     center bottom,
+     center top,
+     from(rgba(255, 255, 255, .1)),
+     to(rgba(255, 255, 255, .2))
+  );
+}
+.buttonx:active, .buttonx.active {
+  top:1px;
+}
+.buttonx span {
+  position: relative;
+  color:#fff;
+  text-shadow:0 1px 1px rgba(0, 0, 0, 0.25);
+  border-top: rgba(255, 255, 255, .2) 1px solid;
+  padding:0.6em 1.3em;
+  line-height:1em;
+  text-align:center;
+  white-space: nowrap;
+}
+
+.buttonx.pequeno span {
+  font-size:10px;
+}
+.buttonx.mediano span {
+  font-size:12px;
+}
+.buttonx.grande span {
+  font-size:16px;
+}
+
+.buttonx.naranja {
+  background-color: #ff7f04;
+}
+.buttonx.verde {
+ background-color: #A70606; /*#FFCD01 /*#278567;*/
+}
+
+.buttonx.gris {
+  background-color: #DBDCDD;
+}
+
+.buttonx.amarillo {
+  background-color: #fac71c;
+}
+.buttonx.rojo {
+  background-color: #e62620;
+}
+.buttonx.azul {
+  background-color: #0390cc;
+}
+.buttonx.verdemusgo {
+  background-color: #92B07A;
+}
+.buttonx.verdeProseso {
+  background-color: #A70606;
+}
+
+.buttonx.naranjaProseso {
+  background-color:#F46F10;
+  }
+.buttonx.azupProseso {
+   background-color: #9A0312;
+}
+/* ****************** *****************  botonX prueba  *********************************/
+
+
+/**************************class varias ********************************************************/
+.organizararriba{
+  vertical-align: top;
+}
+.searchSupply{
+    background: #9A0312;/* color de la barra #f1f1f1 */
+    color: #F1F1F1;/*color de las tres barritas 333*/
+    height:35px;    
+    width:100%;
+    bottom: 0px;
+    position:fixed; 
+    z-index:101; 
+    display: block;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid #E9E9E9;/* borde inferior de la barra*/
+    box-shadow: 1px 2px 9px #c6c6c6; 
+}
+.searchSupply1{
+    display: inline-block;width:30% ;
+}
+.searchSupply2{
+    display: inline-block;width:65% ;
+}
+/**************************class varias ********************************************************/
+
+
+
+
+
+.tapon {
+  background: #9A0312;/* color de la barra #f1f1f1 */
+    color: #F1F1F1;/*color de las tres barritas 333*/
+    height:35px;    
+    width:100%;
+    bottom: 0px;
+    position:fixed; 
+    z-index:101; 
+    display: block;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid #E9E9E9;/* borde inferior de la barra*/
+    box-shadow: 1px 2px 9px #c6c6c6; 
+}
+
+
+/****************************** ventana price ****************************************************************/
+
+ 
+.nav ul {
+  list-style: none;
+  background-color: #9A0312;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.nav li {
+  width: 32%;
+  display: inline-block;
+  box-sizing:border-box;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+.nav a:hover {
+  background-color: #f1f1f1;  color: #444;
+}
+ 
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+}
+ /*
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+ 
+  /* Option 1 - Display Inline *//*
+  .nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+ 
+  /* Options 2 - Float
+  .nav li {
+    float: left;
+  }
+  .nav ul {
+    overflow: auto;
+    width: 600px;
+    margin: 0 auto;
+  }
+  .nav {
+    background-color: #444;
+  }
+  
+}*/
+
+.contenidoPriceBunker {
+  width: 100vw;
+  height: 85vh;
+  text-align: center;
+}
+.imgprice {
+  height: 90vh;
+  object-fit:contain;
+  
+}
+
+/************************************************fin ventana price ****************************************/
+
+/******************************************ports petromarina **************************/
+.portsPetromarinaContenedor {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.viewPorts {
+  position: absolute;
+  top:-22px;
+  width: 100%;
+  height: 100%;
+}
+.searchPorts{
+  background: #9A0312;/* color de la barra #f1f1f1 */
+  color: #F1F1F1;/*color de las tres barritas 333*/
+  height:65px;    
+  width:100%;
+  bottom: 0px;
+  position:fixed; 
+  z-index:101; 
+  display: block;
+  padding: 1px;
+  vertical-align: middle;
+   
+  border-bottom: 1px solid #E9E9E9;/* borde inferior de la barra*/
+  box-shadow: 1px 2px 9px #c6c6c6; 
+}
+.searchPorts a {
+  text-decoration: none;
+  color: #f1f1f1; 
+}
+.searchPortsItems1{
+ display: inline-block;
+ width: 48%;/*background-color: #A70606;*/
+}
+.searchPortsItems2 {
+  display: inline-block;
+  width: 48%;
+  text-transform: uppercase;
+  text-align: center;
+ 
+}
+.portsViews{
+  font-size: 0.9em;
+  font-weight: bolder;
+  padding: 3px;
+  letter-spacing:.1em;
+}
+.portsViewsCountry{
+  font-size: 0.6em;
+  font-weight: small;
+  padding: 3px;
+  letter-spacing:1em;
+}
+.portsViewsCountry2{
+  font-size: 0.6em;
+  font-weight: small;
+  padding: 3px;
+  letter-spacing:0.3em;
+}
+/*************************** menup *******************************/
+#menup {  text-align: center;
+  font-size: 0.7em;
+  width: 100%;
+  margin: 0 auto;
+  }
+  #menup ul { list-style-type: none;}
+  #menup ul li.nivel1 { float: left;
+  width: 48%;
+  margin: 0.5%;
+  }
+  #menup ul li a {display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #9A0312;
+  border: solid .5px #f1f1f1;
+  padding: 4px;
+  position: relative;
+  }
+  #menup ul li:hover {position: relative;
+  }
+  #menup ul li a:hover, #menup ul li:hover a.nivel1 {
+    background-color: #f1f1f1;
+    color: #9A0312;
+  position: relative;
+  }
+  #menup ul li a.nivel1 {display: block!important;display: none;
+  }
+  #menup ul li ul {display: none;
+  }
+  #menup ul li a:hover ul, #menup ul li:hover ul {display: block;
+  position: absolute;left: 0px;
+  }
+  #menup ul li ul li a {width: 190px;
+  padding: 6px 0px 8px 0px;
+  border-bottom-color: #000;
+  }
+  #menup ul li ul li a:hover {border-bottom-color: #000;
+  position: relative;
+  }
+  table.falsa {border-collapse:collapse;
+  border:0px;
+  float: left;
+  position: relative;
+  }
+  ul#uno {top: -525px!important; top: -525px;}
+  ul#dos {top: -575px!important; top: -575px;}
+  ul#tres {top: -577px!important; top: -578px;}
+  ul#cuatro {top: -436px!important; top: -437px;}
+  ul#cinco {top: -347px!important; top: -348px;}
+
+.oculta {
+   visibility: visible; 
+}
+
+
+/**************************************fin petromarina ports *9*********************************************/
+
+/*******************************************ofertas.php*************************************/
+.ofertasCajon {
+  width: 98%; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(1fr,1fr));
+  grid-auto-rows: 50px;
+  grid-auto-columns: 100px;
+  grid-auto-flow: row dense; 
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 10px auto 0 auto;
+  box-sizing: border-box; 
+}
+
+ .ofertaCajita{
+   grid-area: span 2/ span 3  ;
+     border-radius: 5px; 
+    
+    background-color: whitesmoke; /* #9A0312;*/
+     overflow: hidden; 
+    box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.5); 
+    filter: brightness(80%);
+    box-sizing: border-box;
+   color: #9A0312;
+    display: block ; 
+    justify-content: center;
+    padding: 10px;
+
+ }
+ .ofertaCajitaFoto{
+  width: 30%;
+  display: inline-block;
+ /* background-color: purple;*/
+  box-sizing: border-box;vertical-align: middle;
+ }
+
+
+ .ofertaCajitaTexto{
+   text-align: center;
+  width: 65%;
+  display: inline-block;
+ /* background-color: green;*/
+  box-sizing: border-box;vertical-align: middle;
+ }
+
+
+
+ .ofertaCajitaFoto img {  
+  width: 100%; 
+  height: 100%; 
+   border-radius: 5px;
+  object-fit: contain;
+  box-sizing: border-box;
+ }
+ .tituloOCT {
+ 
+  text-transform:uppercase;
+  font-size:1.6em;
+  padding: 5px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+ }
+ .descripOCT{
+  text-transform:uppercase;
+  font-size:.8em;
+  padding: 5px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+ }
+ /******************************************fin ofertas.php***************************************/
