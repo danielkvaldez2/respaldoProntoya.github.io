@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="col-sm m-2">
+    <div class="col-sm" style="max-width:310px; margin: 0 auto; margin-bottom:20px;">
         <div class="card"  >
         <img src="img/productos/patamuslo.jpg" height="180px" class="card-img-top shadow-sm" alt="hry">
         <div class="card-body text-center">
@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="col-sm m-2">
+    <div class="col-sm" style="max-width:310px; margin: 0 auto; margin-bottom:20px;">
         <div class="card"  >
         <img src="img/productos/trozado.jpg" height="180px" class="card-img-top shadow-sm" alt="hry">
         <div class="card-body text-center">
@@ -24,7 +24,7 @@
         </div>
     </div>
  
-    <div class="col-sm m-2">
+    <div class="col-sm" style="max-width:310px; margin: 0 auto; margin-bottom:20px;">
         <div class="card"  >
         <img src="img/productos/pancasero.jpg" height="180px" class="card-img-top shadow-sm" alt="hry">
         <div class="card-body text-center">
@@ -37,7 +37,7 @@
     </div>
  
 
-    <div class="col-sm m-2">
+    <div class="col-sm" style="max-width:310px; margin: 0 auto; margin-bottom:20px;">
         <div class="card"  >
         <img src="img/productos/quibrah.jpg" height="180px" class="card-img-top shadow-sm" alt="hry">
         <div class="card-body text-center">
@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <div class="col-sm m-2">
+    <div class="col-sm" style="max-width:310px; margin: 0 auto; margin-bottom:20px;">
         <div class="card"  >
         <img src="img/productos/brahma.jpg" height="180px" class="card-img-top shadow-sm" alt="hry">
         <div class="card-body text-center">
@@ -61,13 +61,25 @@
         </div>
     </div>
  
-    <div class="col-sm m-2">
+    <div class="col-sm" style="max-width:310px; margin: 0 auto; margin-bottom:20px;">
         <div class="card"  >
         <img src="img/productos/quilmes.jpg" height="180px" class="card-img-top shadow-sm" alt="hry">
         <div class="card-body text-center">
             <h5 class="card-title">Quilmes</h5>
             <p class="card-text">$ 85 cada una OFERTA x dos</p>
             <a href="#" class="btn btn-info m-3">$ 160</a>
+            <div class="sharethis-inline-share-buttons"></div>  
+        </div>
+        </div>
+    </div>
+
+    <div class="col-sm" style="max-width:310px; margin: 0 auto; margin-bottom:20px;">
+        <div class="card"  >
+        <img src="img/productos/pizzas-listas.jpg" height="180px" class="card-img-top shadow-sm" alt="hry">
+        <div class="card-body text-center">
+            <h5 class="card-title">Pizza Lista</h5>
+            <p class="card-text">Muzarella</p>
+            <a href="#" class="btn btn-info m-3">$ 150</a>
             <div class="sharethis-inline-share-buttons"></div>  
         </div>
         </div>

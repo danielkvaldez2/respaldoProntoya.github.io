@@ -1,6 +1,6 @@
-<div class="jumbotron jumbotron-fluid bg-warning text-center m-3 ">
+<div class="jumbotron jumbotron-fluid bg-warning text-center m-3">
   <div class="container">
-    <h1 class="text-danger shadd"><span><img src="img/productos/pronto152.png" height="45px" > </span>  DOMINGOS PARRILLA</h1>
+    <h1 class="text-danger shadd"><img src="img/productos/pronto152.png" height="45px" >COMIDAS CASERAS</h1>
     <img src="img/prontoW.png" width="" height="50px" alt=""/>
     <p class="small">Av. Francisco de Haro 5285 - Posadas Misiones</p>
     <p> <strong> ABIERTO de Lunes a Domingos de 8.00hs. a 0.00hs. de CORRIDO </strong> </p>

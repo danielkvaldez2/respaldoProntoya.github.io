@@ -9,10 +9,13 @@
         <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-        <a class="nav-item nav-link" href="#">Comprar</a>
+        <a class="nav-item nav-link" href="ofertas.php">ver Ofertas</a>
         </li>
         <li class="nav-item">
-        <a class="nav-item nav-link" href="ofertas.php">ver Ofertas</a>
+        <a class="nav-item nav-link" href="comidas.php">Comidas</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-item nav-link" href="#">Comprar</a>
         </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
