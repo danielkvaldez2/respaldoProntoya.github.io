@@ -1,0 +1,25 @@
+/* kvalhostWebMaster.com | Web Master Portafolio Responsive Web Desing en HTML5, CSS3, jQuery, Javascript - http://kvalhostWebMaster.com */
+
+/* TEAM */
+    Creator: Daniel Valdez
+    Contact: kvalhost.com
+    Twiter: @orlando69valdez
+    From: Garupa, Misiones, Argentina
+
+/* IN MEMORIAL */
+    Papi
+
+/* THANKS */
+    Sandra Esther Ortiz
+    and my children
+    Maria, Milagros, Horacio, Matias, Camila, Guadalupe, Ailin, Leo, Alma, Jhonas,Morena.
+
+/* SITE */
+    Last update: 2020/02/20
+    Lenguaje: Espa�ol
+    Standars: html5, php, css3, javaScript, jquery, boostrap
+    Components: jQuery
+    Software:  Visual Studio Code, sublimeText3, Notepad++, dreamweaver,
+  
+
+

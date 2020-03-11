@@ -956,7 +956,7 @@ border: rgba(0, 0, 0, .2) 1px solid;
 }
 
  .ofertaCajita{
-   grid-area: span 2/ span 3  ;
+   grid-area: span 2/ span 3;
      border-radius: 5px; 
     
     background-color: whitesmoke; /* #9A0312;*/
@@ -970,6 +970,9 @@ border: rgba(0, 0, 0, .2) 1px solid;
     padding: 10px;
 
  }
+
+
+
  .ofertaCajitaFoto{
   width: 30%;
   display: inline-block;
@@ -1008,4 +1011,4 @@ border: rgba(0, 0, 0, .2) 1px solid;
   padding: 5px;
   text-shadow: 1px 1px 2px rgba(0,0,0,.5);
  }
- /******************************************fin ofertas.php***************************************/
+ /**************

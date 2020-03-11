@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">   
+
+	<url>
+
+	  <loc>http://www.petromarina.net/index.php</loc>
+	  <loc>http://www.petromarina.net/news-last-word.php</loc>
+	  <loc>http://www.petromarina.net/news-list.php</loc>
+	  <loc>http://www.petromarina.net/blog-list.php</loc>
+	  <loc>http://www.petromarina.net/supplylogistics.php</loc>
+	  <loc>http://www.petromarina.net/priceBunker.php</loc>				  	
+	  <loc>http://www.petromarina.net/vesselsonline.php</loc>
+	  <loc>http://www.petromarina.net/portsPetromarina.php</loc>
+	  <loc>http://www.petromarina.net/databaseShips.php</loc>	
+
+      <lastmod>2020-02-20</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+
+</urlset> 

@@ -1,0 +1,410 @@
+/*
+  R E S E T (Por Eric Meyer)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td { margin: 0;  padding: 0; border: 0;  outline: 0; font-size: 100%;
+                                                  vertical-align: top;  }
+body                      { line-height: 1;}
+ol, ul                    { list-style: none;}
+blockquote, q             { quotes: none;}
+:focus                    { outline: 0;}
+ins                       { text-decoration: none;}
+del                       { text-decoration: line-through;}
+table                     { border-collapse: collapse;  border-spacing: 0; }
+a img                     { border:none }
+/*
+R E S E T (Por Eric Meyer)
+*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+body {
+    margin: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+	  background-color:#CE020E;
+    color: #F1F1F1;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+/*-----Menu responsive con subcategorias de MBT modificado por Minerva Aurora----*/
+#menu{
+  background: #9A0312;/* color de la barra #f1f1f1 */
+  color: #F1F1F1;/*color de las tres barritas 333*/
+  height: 45px;
+  border-bottom: 1px solid #E9E9E9;/* borde inferior de la barra*/
+  box-shadow: 1px 2px 9px #c6c6c6;/* sombra inferior de la barra*/
+  width:100%;
+  position:fixed;
+  top: 0px;
+  z-index:101; 
+  }
+  #menu ul,#menu li{
+  margin:0 auto;
+  padding:0 0;
+  list-style:none
+  }
+  #menu ul{
+  height:45px;
+  width:100%; /* ancho del menú, ajustar para centrarlo*/
+  }
+  #menu li{
+  float:left;
+  display:inline;
+  position:relative;
+  font: 11px Arial, sans-serif;/*tamaño y fuente del texto */
+  }
+  #menu a{
+  display: block;
+  line-height: 40px;
+  padding: 0 14px;
+  text-decoration: uppercase;
+  color: #f1f1f1;/*color del texto*/
+  text-transform: uppercase;/*letras mayúsculas*/
+  letter-spacing: 1.5px;/*espacio entre letras*/
+  }
+  #menu li a:hover{
+  color: #f1f1f1;/*color del texto al pasar el ratón*/
+  text-decoration: none;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -ms-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  background: rgb(138, 188, 228);/*color del fondo de la categoria al pasar el ratón*/
+  }
+  #menu input{
+  display:none;
+  margin:0 0;
+  padding:0 0;
+  width:80px;
+  height:30px;
+  opacity:0;
+  cursor:pointer
+  }
+  #menu label{
+  font: 25px  Arial, sans-serif ;
+  font-weight: bold;
+  display:none;
+  width:35px;
+  height:35px;
+  line-height:43px;
+  text-align:center;
+  }
+  #menu label span{
+  font: 12px  Arial, sans-serif;/*tamaño y fuente del texto "menu" */
+  position:absolute;
+  left:35px;
+  text-transform:uppercase;
+  font-weight: bold;
+  line-height: 40px;
+  letter-spacing:0.5px;
+  }
+  #menu ul.menus{
+  height: auto;
+  overflow: hidden;
+  width: 170px;
+  background: rgb(189, 80, 91);/*color del fondo del submenu*/
+  position: absolute;
+  z-index: 99;
+  display: none;
+  border: 1px solid #E9E9E9;
+  }
+  #menu ul.menus li{
+  display: block;
+  width: 100%;
+  font: 11px  Arial, sans-serif;/*tamaño y fuente del  texto del submenu*/
+  text-transform: uppercase;
+  border-bottom: 1px solid #E9E9E9;
+
+   }
+  #menu ul.menus li:last-child{
+  border-bottom:none;
+  }
+  #menu ul.menus a{
+  color: #f1f1f1;/*color del  texto del submenu*/
+  line-height: 35px;
+  }
+  #menu li:hover ul.menus{
+  display:block
+  }
+  #menu ul.menus a:hover{
+  background: rgb(163, 193, 238);/*color del  fondo del submenu al pasar el ratón*/
+  color: #f1f1f1;/*color del  texto del submenu al pasar el ratón*/
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -ms-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  }
+ /* @media screen and (max-width: 800px){
+        #menu{
+        position:fixed; 
+        z-index:101; 
+        }
+        #menu ul{
+        background:#ce020e;/*color del desplegable del menu movil 
+        position:absolute;
+        top:100%;
+        right:0;
+        left:0;
+        z-index:3;
+        height:auto;
+        display:none
+        }
+        #menu ul.menus{
+        width:100%;
+        position:static;
+        padding-left:20px
+        }
+        #menu li{
+        display:block;
+        float:none;
+        width:auto;
+        font: 11px  Arial, sans-serif;
+        }
+        #menu a{
+        display: block;
+        line-height: 40px;
+        padding: 0 14px;/*tamaño y fuente del  menu movil 
+        }
+        #menu input,#menu label{
+        position:absolute;
+        top:0;
+        left:0;
+        display:block
+        }
+        #menu input{
+        z-index:4
+        }
+        #menu input:checked + label{
+        color:#F1F1F1;/*color de las tres barritas una vez se clica 
+        }
+        #menu input:checked ~ ul{
+        display:block
+        }
+  }
+/********************************************fin del menu         ***********************    */
+
+/*******************************************ofertas.php*************************************/
+.ofertasCajon {
+    width: 98%; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(1fr,1fr,1fr,1fr,1fr,1fr));
+    grid-auto-rows: 55px;
+    grid-auto-columns: 120px;
+    grid-auto-flow: row dense; 
+    grid-gap: 10px;
+    justify-content: center; 
+    margin: 10px auto 0 auto;
+    box-sizing: border-box; 
+   /* background-color: greenyellow;*/
+}
+
+ .ofertaCajita{
+    grid-area: span 2/ span 6;
+    border-radius: 5px; 
+    background-color: #ddd; /* #9A0312;*/
+    overflow: hidden; 
+    box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.5); 
+    filter: brightness(80%);
+    box-sizing: border-box;
+    color: #9A0312;
+    display: block ; 
+    justify-content: center;
+    padding: 10px;
+ }
+
+ .ofertaCajita1{
+    grid-area: span 1/ span 3;
+    border-radius: 5px; 
+    text-align: center;
+}
+
+ .ofertaCajitaFoto{
+  width: 30%;
+  display: inline-block;
+ /* background-color: purple;*/
+  box-sizing: border-box;vertical-align: middle;
+ }
+
+
+ .ofertaCajitaTexto{
+   text-align: center;
+  width: 65%;
+  display: inline-block;
+ /* background-color: green;*/
+  box-sizing: border-box;vertical-align: middle;
+ }
+
+ .ofertaCajitaFoto>img {  
+    width:100px;
+   height:100px ;
+   border-radius: 5px;
+  object-fit: contain;
+  box-sizing: border-box;
+ }
+ .tituloOCT {
+ 
+  text-transform:uppercase;
+  font-size:1.6em;
+  padding: 5px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+ }
+ .descripOCT{
+  text-transform:uppercase;
+  font-size:.8em;
+  padding: 5px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+ }
+
+.ofertaCajitaMedia {
+  width: 48%;
+  display: inline-block;
+ /* background-color: purple;*/
+  box-sizing: border-box;vertical-align: middle;
+  text-align: center;
+}
+.ofertaCajitaMedia2 {
+  width: 100%;
+  display: inline-block;
+ /* background-color: purple;*/
+  box-sizing: border-box;vertical-align: middle;
+  text-align: center;
+}
+ /******************************************fin ofertas.php***************************************/
+
+ 
+
+/******************************************redes sociales**************************************/
+ 
+.ofertaCajita1>ul { 
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  
+  .ofertaCajita1>ul li {
+    list-style: none;
+  }
+  
+  .ofertaCajita1>ul li a {
+    position: relative;
+    width:45px;
+    height:45px;
+    display:block;
+    text-align:center;
+    margin:0 10px;
+    border-radius: 50%;
+    padding: 4px;
+    box-sizing: border-box;
+    text-decoration:none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s;
+  }
+  
+  .ofertaCajita1>ul li a:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  .ofertaCajita1>ul li a .fa {
+    width: 100%;
+    height:100%;
+    display:block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(45px - 12px);
+    font-size:22px;
+    color: #262626;
+    transition: .5s;
+  }
+  
+  .ofertaCajita1>ul li:nth-child(1) a:hover .fa {
+    color: #3b5998;
+  }
+  
+  .ofertaCajita1>ul li:nth-child(2) a:hover .fa {
+    color: #00aced;
+  }
+  
+  .ofertaCajita1>ul li:nth-child(3) a:hover .fa {
+    color: #dd4b39;
+  }
+  
+  .ofertaCajita1>ul li:nth-child(4) a:hover .fa {
+    color: #007bb6;
+  }
+  
+  .ofertaCajita1>ul li:nth-child(5) a:hover .fa {
+    color: #e4405f;
+  }
+  /******************************fin redes sociales *********************************/
+
+
+
+
+
+
+
+
+
+
+
+ /******************************media *********************************/
+  @media screen and (max-width: 800px){
+    #menu{
+    position:fixed; 
+    z-index:101; 
+    }
+    #menu ul{
+    background:#ce020e;/*color del desplegable del menu movil*/
+    position:absolute;
+    top:100%;
+    right:0;
+    left:0;
+    z-index:3;
+    height:auto;
+    display:none
+    }
+    #menu ul.menus{
+    width:100%;
+    position:static;
+    padding-left:20px
+    }
+    #menu li{
+    display:block;
+    float:none;
+    width:auto;
+    font: 11px  Arial, sans-serif;
+    }
+    #menu a{
+    display: block;
+    line-height: 40px;
+    padding: 0 14px;/*tamaño y fuente del  menu movil*/
+    }
+    #menu input,#menu label{
+    position:absolute;
+    top:0;
+    left:0;
+    display:block
+    }
+    #menu input{
+    z-index:4
+    }
+    #menu input:checked + label{
+    color:#F1F1F1;/*color de las tres barritas una vez se clica*/
+    }
+    #menu input:checked ~ ul{
+    display:block
+    }
+/******************************fin menu *********************************/
+
+    .ofertaCajita{
+      grid-area: span 2/ span 3;
+}
+/******************************fin media media *********************************/
