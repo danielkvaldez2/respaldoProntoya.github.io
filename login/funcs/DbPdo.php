@@ -6,7 +6,7 @@ class DbPdo {
   private $_passwd = "1205diego";  */
   private $_username = "root";
 	private $_passwd = "";
-	private $_dns = "mysql:host=localhost;dbname=petromar_supply";
+	private $_dns = "mysql:host=localhost;dbname=prontoya";
 	private static $_instance = null;
 	 
 	public static function getInstance(){ 

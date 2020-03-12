@@ -7,7 +7,7 @@
 <?php require_once "menu.php"; ?>
 </br>
 <div class="container"> 
-    <?php require_once "separadorComidas.php";?>
+    <?php require_once "separadorComidas.php";?> 
     <?php require_once "cardsComidas.php"; ?> 
     <?php require_once "separadorFooter.php";?>   
 </div>  

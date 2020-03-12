@@ -52,9 +52,12 @@
           </div>
           </div>
     </div>
+    </br>
     <p> <strong> ABIERTO de Lunes a Domingos de 8.00hs. a 0.00hs. de CORRIDO </strong> </p>
+    </br>
+    <img src="img/cobrarQR.jpg"  height="400px" alt="noTa">
+    </br>  </br>
     <p class="small">www.prontoya.com - © Copyright 2020  </br>
      by <b>kvalhost System ®</b>  <a href="https://wa.me/543765119303?text=Me%20gustaría%20comunicarme%20con%20Ustedes%20" target="_blank" ><img src="img/whatsapp.png"  width="20px" height="20px" alt="" title="comunicate con kvalhost System" ></a> </p>
-    
   </div>
 </div> 
