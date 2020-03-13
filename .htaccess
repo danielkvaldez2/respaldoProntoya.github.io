@@ -1,32 +1,32 @@
-RewriteBase /
-RewriteEngine on
+# RewriteBase /
+# RewriteEngine on
  
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php 
-#RewriteRule ^([a-z]+)/?$ $1.php [NC]
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME}\.php -f
+# RewriteRule ^(.*)$ $1.php 
+# RewriteRule ^([a-z]+)/?$ $1.php [NC]
 
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html
-#RewriteRule ^([a-z]+)/?$ $1.html [NC]
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME}.html -f
+# RewriteRule ^(.*)$ $1.html
+# RewriteRule ^([a-z]+)/?$ $1.html [NC]
 
-AddDefaultCharset utf-8
-ErrorDocument 400 /error/badrequest.php
+# AddDefaultCharset utf-8
+# ErrorDocument 400 /error/badrequest.php
 #   400 peticion no valida
-ErrorDocument 401 /error/authreqd.php
+# ErrorDocument 401 /error/authreqd.php
 #   401  se requiere auorizacion
-ErrorDocument 403 /error/forbid.php
+# ErrorDocument 403 /error/forbid.php
 #   403   prohibido
-ErrorDocument 404 /error/notfound.php
+# ErrorDocument 404 /error/notfound.php
 #   404   pagina erroneo
-ErrorDocument 500 /error/serverr.php
+#ErrorDocument 500 /error/serverr.php
 #   500   error interno del servidor
-ErrorDocument 522 /error/serverHost.php
+# ErrorDocument 522 /error/serverHost.php
 #   522   error interno del servidor
 
-RewriteRule ^([a-z]+)\.html$ /index.php?$1 [R,L] 
+#RewriteRule ^([a-z]+)\.html$ /index.php?$1 [R,L] 
 #RewriteRule ^BienvenidosProntoya$ /news-last-word.php [R,L] 
 
 #RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)\.html$ /#library/prosesos.php?RecordId=$1&Foto=$2&Titulo=$3&Codigo=$4&Importe=$5&ProdMarca=$6&ProdVolumen=$7&#ProdDescripcion=$8&Cantidad=$9&Oferta=$10 [L]
@@ -35,7 +35,7 @@ RewriteRule ^([a-z]+)\.html$ /index.php?$1 [R,L]
 #AddType application/x-httpd-php .aspx
 
 # Options -Indexes
-IndexIgnore *
+#IndexIgnore *
 
 
 # RewriteRule ^BienvenidosPetromarinaNew$ news-last-word.php [L]

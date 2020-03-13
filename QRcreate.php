@@ -6,7 +6,7 @@
 	$dir = 'QR_temp/';
 	
 	//Si no existe la carpeta la creamos
-	if (!file_exists($dir))
+	if (!file_exists($dir)) 
         mkdir($dir);
 	
         //Declaramos la ruta y nombre del archivo a generar
