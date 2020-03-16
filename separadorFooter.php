@@ -61,3 +61,17 @@
      by <b>kvalhost System ®</b>  <a href="https://wa.me/543765119303?text=Me%20gustaría%20comunicarme%20con%20Ustedes%20" target="_blank" ><img src="img/whatsapp.png"  width="20px" height="20px" alt="" title="comunicate con kvalhost System" ></a> </p>
   </div>
 </div> 
+
+
+
+
+
+
+
+            <!-- Div WHATSAPP -->
+                <div class="whatsappHeavy"> 
+                          <a href="https://wa.me/543765059161?text=Me%20gustaría%20que%20me%20envien%20" target="_blank" >
+                          <img src="img/whatsapp.png" class="WhatAImg"  alt="" title="comunicate con el Local" >
+                        </a>
+                </div> 
+            <!-- end Div WHATSAPP --> 

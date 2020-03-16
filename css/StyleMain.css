@@ -8,3 +8,29 @@ body {
     text-shadow: 1px 2px 3px rgba(0,0,0,.8);
   
 }
+
+.whatsappHeavy{  
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 20px;
+	z-index: 99999;
+    background-color: transparent;
+    vertical-align: middle;
+    text-align: center;
+}
+.whatsappHeavy>a>.WhatAImg {
+    width: 40px;
+	height: 40px;
+}
+.whatsappHeavy>a>.WhatAImg:hover {
+    width: 49px;
+    height: 49px;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}

@@ -14,10 +14,13 @@
     <?php require_once "cardsOfertas.php"; ?> 
     <?php require_once "separadorComidas.php";?>
     <?php require_once "cardsComidas.php"; ?> 
-    <?php require_once "separadorFooter.php";?>   
+    <?php require_once "separadorFooter.php";?>  
+    
+          
+    
 </div>  
 </br> </br> </br></br>
-<?php require_once "script.php"; ?>
+<?php require_once "script.php"; ?> 
 </body>
 </html>
 
