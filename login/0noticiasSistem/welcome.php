@@ -58,25 +58,25 @@
 						<a class="nav-link" href="#">Administrador <span class="sr-only">(current)</span></a>
 					</li>
 
-					<li class="nav-item active">
+		<!--			<li class="nav-item active">
 						<a class="btn btn-info" href="welcomeNoticias.php" title="News"> News </a>
 					</li>
 					&nbsp;&nbsp;&nbsp;
 					<li class="nav-item active">
 						<a class="btn btn-success" href="welcomePorts.php" title="Ports"> Ports </a>
-					</li>
+					</li> -->
 					&nbsp;&nbsp;&nbsp;
 					<li class="nav-item active">
 						<a class="btn btn-warning" href="welcomeShop.php" title="Shop"> Shop </a>
 					</li>
-					&nbsp;&nbsp;&nbsp;
+			<!--		&nbsp;&nbsp;&nbsp;
 					<li class="nav-item active">
 						<a class="btn btn-danger" href="welcomeComments.php" title="Comments"> Comments </a>
 					</li>
 					&nbsp;&nbsp;&nbsp;
 					<li class="nav-item active">
 						<a class="btn btn-dark" href="welcomeShips.php" title="Ships"> Ships </a>
-					</li>
+					</li> -->
 				<?php } ?>
 				
 				<li class="nav-item">

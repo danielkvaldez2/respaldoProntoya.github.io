@@ -64,14 +64,6 @@
 
 
 
+              
 
-
-
-
-            <!-- Div WHATSAPP -->
-                <div class="whatsappHeavy"> 
-                          <a href="https://wa.me/543765059161?text=Me%20gustaría%20que%20me%20envien%20" target="_blank" >
-                          <img src="img/whatsapp.png" class="WhatAImg"  alt="" title="comunicate con el Local" >
-                        </a>
-                </div> 
-            <!-- end Div WHATSAPP --> 
+            

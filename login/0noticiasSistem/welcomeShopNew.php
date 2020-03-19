@@ -14,7 +14,7 @@
    $sql = "SELECT id, nombre FROM usuarios WHERE id = '$idUsuario'";
    $result = $mysqli->query($sql);
    
-   $rowUser = $result->fetch_assoc();
+   $rowUser = $result->fetch_assoc();  
 
 	  
 ?>
@@ -252,8 +252,8 @@ input[type=file] {
 
 <script type = 'text/javascript' src = 'https://platform-api.sharethis.com/js/sharethis.js#property=5e4bd4faeac6ff0012aa5888&product=inline-share-buttons' async = 'async'> </script>
 
-<script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
-
+<script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+                                         
 <!--<link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' />-->
 <script>
 $(document).ready(function() {

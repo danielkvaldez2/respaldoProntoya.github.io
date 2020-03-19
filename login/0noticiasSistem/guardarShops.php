@@ -27,12 +27,11 @@
 // var_dump($_FILES);
   /* booleana graba archivo db con dos sql diferentes */
 
-  $sql = "INSERT INTO tbl_productos(strProdNombProducto, strProdMarca, strProdVolumen, strProdDescripcion, floatProdPrecio, strProdCodigo, strProdImagen, strProdImagenThumb, id_categProd, id_subcategProd, strOferta, userModif) VALUES ('$strProdNombProducto','$strProdMarca','$strProdVolumen','$strProdDescripcion','$floatProdPrecio','$strProdCodigo','$archivo1','$archivo1','$id_categProd','$id_subcategProd','$strOferta','$userModif')";
+  $sql = "INSERT INTO `tbl_productos`( `strProdNombProducto`, `strProdMarca`, `strProdVolumen`, `strProdDescripcion`, `floatProdPrecio`, `strProdCodigo`, `strProdImagen`, `strProdImagenThumb`, `id_categProd`, `id_subcategProd`, `strOferta`, `userModif`) VALUES ('$strProdNombProducto','$strProdMarca','$strProdVolumen','$strProdDescripcion','$floatProdPrecio','$strProdCodigo','$archivo1','$archivo1','$id_categProd','$id_subcategProd','$strOferta','$userModif')";
 
   $resultado = $mysqli->query($sql);
 
-
-  //echo " Archivo Guardado";   , 
+ 
 	
   if(isset($_FILES["imagen"]) && $_FILES["imagen"] != "")
   {
@@ -44,7 +43,7 @@
 	  $dimensiones = getImageSize($ruta_provisional);
 	  $width = $dimensiones[0];
 	  $height = $dimensiones[1];
-	  $carpeta = "../../library/public/img/productos/";
+	  $carpeta = "../../carroCompras/img/productos/";
 	   
 		  $ancho = 150;
 		  if ($ancho < $width) 
@@ -84,7 +83,7 @@
 			 
   
 		  }else{
-			$carpeta = "../../library/public/img/productos/";
+			$carpeta = "../../carroCompras/img/productos/";
 			$nombre = $_FILES["imagen"]["name"];
 			$name01 = "Shop_Orig_$nombre" ;
 			$name02 = "Shop_Mini_$nombre" ;
@@ -156,7 +155,7 @@
 			<div class="row">
 				<div class="row" style="text-align:center">
 				    <?php if($resultado) { 
-						header("location: welcomeShop.php");
+						header("location: welcomeShop.php"); 
 					} else { ?>
 					<h3>ERROR AL GUARDAR</h3>
 					<?php } ?>

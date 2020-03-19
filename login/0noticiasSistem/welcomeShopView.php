@@ -76,7 +76,7 @@
 
 			<div class="shadow p-3 mb-5 bg-white rounded"> 
 				<div class="card-body">
-					<img  width="340" src="../../library/public/img/productos/miniatura/Shop_Mini_<?php echo $row['strProdImagen']; ?>">
+					<img  width="340" src="../../carroCompras/img/productos/miniatura/Shop_Mini_<?php echo $row['strProdImagen']; ?>">
 				</div>
 			</div>
 			<div class="card-body">

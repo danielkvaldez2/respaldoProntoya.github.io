@@ -56,7 +56,7 @@
 		$dimensiones = getImageSize($ruta_provisional);
 		$width = $dimensiones[0];
 		$height = $dimensiones[1];
-		$carpeta = "../../library/public/img/productos/";
+		$carpeta = "../../carroCompras/img/productos/";
 		 
 			$ancho = 150;
 			if ($ancho < $width) 
@@ -96,7 +96,7 @@
 			   
 	
 			}else{
-			  $carpeta = "../../library/public/img/productos/";
+			  $carpeta = "../../carroCompras/img/productos/";
 			  $nombre = $_FILES["imagen"]["name"];
 			  $name01 = "Shop_Orig_$nombre" ;
 			  $name02 = "Shop_Mini_$nombre" ;

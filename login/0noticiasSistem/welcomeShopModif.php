@@ -149,7 +149,7 @@
 			
 			    <div id="respuesta" class="thumbnail">  <!-- preview * respuestao -->
 					<a href="#" id="file-select" class="btn1 default" title="Seleccionar Imagen JPEG - PNG">+ Seleccionar Imagen</a>
-					<img src="../../library/public/img/productos/miniatura/Shop_Mini_<?php echo $row['strProdImagen']; ?>"/>
+					<img src="../../carroCompras/img/productos/miniatura/Shop_Mini_<?php echo $row['strProdImagen']; ?>"/>
 				</div>
 				<span  id="file-info" class="btn1 default">No hay archivo aún</span>
 
@@ -269,7 +269,7 @@
 <script type = 'text/javascript' src = 'https://platform-api.sharethis.com/js/sharethis.js#property=5e4bd4faeac6ff0012aa5888&product=inline-share-buttons' async = 'async'> </script>
 
 
-<script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
 
 <!--<link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' />-->
 <script>
