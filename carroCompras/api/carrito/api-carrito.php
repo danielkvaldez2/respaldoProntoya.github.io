@@ -18,7 +18,7 @@ if(isset($_GET['action'])){
         case 'remove':
         remove($carrito);
         break;
-
+ 
         default:
     }
 }else{
@@ -52,11 +52,11 @@ function add($carrito){
         echo $res;
     }else{
         // error
-        echo jason_encode(['statuscode'=> 404, 'response'=>'No se puede prosesar la solicitar, id vacio']);
+        echo json_encode(['statuscode'=> 404, 'response'=>'No se puede prosesar la solicitar, id vacio']);
     }
 }
 
-function remove($carrito){
+function remove($carrito){ 
     if(isset($_GET['id'])){
         $res = $carrito->remove($_GET['id']);
         if($res){
@@ -66,9 +66,15 @@ function remove($carrito){
         }
     }else{
         // error
-        echo jason_encode(['statuscode'=> 404, 'response'=>'No se puede prosesar la solicitar, id vacio']);
+        echo json_encode(['statuscode'=> 404, 'response'=>'No se puede prosesar la solicitar, id vacio']);
     }
 }
+
+
+ 
+
+
+
 
 
 

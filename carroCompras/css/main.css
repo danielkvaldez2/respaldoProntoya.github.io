@@ -145,18 +145,6 @@ button:hover {
 
 
 
-.btn-carrito {
-    width: auto;
-    height: auto;
-    color: blueviolet;
-    z-index: 99999;
-    background-color: whitesmoke;
-}
-
-.btn-carrito:hover{
-    color: black;
-}
-
 /************************************ start  ventana modal *********************************/
 
 #bg-windows{
@@ -178,13 +166,13 @@ button:hover {
     overflow: scroll;
     background-color: blanchedalmond;
     text-transform: uppercase;
+    padding-left: 10px;
    
 }
  
 /************************************ end ventana modal *********************************/
-.btnC {
-    width: 150px;
-     
+.btnC, .btnConf, .btn-carrito {
+    width: 150px;    
     text-align: center;
     text-decoration: none;
     font-size: 1em;
@@ -192,15 +180,24 @@ button:hover {
     color: white;
     border-radius: 10px ;
     margin: 0 auto ;
-    padding: 12px;
+    padding: 10px;
     vertical-align: middle;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.btnC:hover {
-     transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    cursor: pointer;
+.btnConf {
+    text-decoration: none;
+    background-color:rgb(18, 165, 4); 
+    margin-right: 30px;
+}
+ .btn-carrito{
+    z-index: 99999;
+    background-color:  rgb(177, 19, 19);
+ }
+ .btnC:hover, .btnConf:hover , .btn-carrito:hover {
+    transform: scale(1.02);
+   -moz-transform: scale(1.02);
+   -ms-transform: scale(1.02);
+   -webkit-transform: scale(1.02);
+   cursor: pointer;
 }

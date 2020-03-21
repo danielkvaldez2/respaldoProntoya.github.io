@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     let cookie = null;
     cookies.forEach(item =>{
         if(item.indexOf('items') > -1){
-            cookie = item;
+            cookie = item; //asigno elemento a la cookie
         }
     });
     if(cookie != null){
@@ -32,11 +32,6 @@ bCarrito.addEventListener('click', (e) =>{
 
 
 
-
-
-
-
-
 function actualizarCarritoUI(){
     fetch('http://localhost/sistema/respaldoProntoya/carroCompras/api/carrito/api-carrito.php?action=mostrar')
     .then(response =>{
@@ -55,7 +50,7 @@ function actualizarCarritoUI(){
                     </div>
                     <div class='info'>
                         <input type='hidden' value='${element.id}' />
-                        <div class='nombre'>${element.nombre}</div>
+                        <div class='nombre'>${element.cantidad} -- ${element.nombre}</div>
                         <div>${element.cantidad} items de $${element.precio}</div>
                         <div>Subtotal: $${element.subtotal}</div>
     
@@ -87,6 +82,15 @@ function actualizarCarritoUI(){
                 removeItemFromCarrito(id);
             })
         });
+        document.querySelectorAll('.btnC').forEach(boton =>{
+            boton.addEventListener('click', () => {
+                       // console.log(data);
+                       // console.log( data.info  );
+                       // console.log( data.items  ) ;     
+                 comprarItemsFromCarrito(data);
+
+            })
+        });
     });
 }
 
@@ -94,7 +98,6 @@ const botones = document.querySelectorAll('button');
 
 botones.forEach(boton => {
     const id = boton.parentElement.parentElement.children[0].value;
-
     boton.addEventListener('click', e =>{
         addItemToCarrito(id);
     });
@@ -120,4 +123,44 @@ const removeItemFromCarrito = id =>{
         actualizarCarritoUI();
     });
 };
+ 
+const comprarItemsFromCarrito = data =>{  
+    console.log(data);
+    let tablaCont = document.querySelector('#tabla'); // obtener el obj id=tabla del menu.php
+    let precioTotal = '';
+    let html5 = ``;
+    let html = ``;
+    data.items.forEach(element => {
+        html += `
+            <div class='fila'>
+                <div class='imagen'>
+                  <img src='img/productos/miniatura/Shop_Mini_${element.imagen}' height='50' width='50' />
+                </div>
+                <div class='info'>
+                  
+                      <b> ${element.nombre}</b> <small>
+                     Cantidad: </small><b> ${element.cantidad}</b> <small> items de $: </small> <b>${element.precio}</b>  <small> 
+                    Subtotal: $:  </small><b>${element.subtotal}</b> 
+                    
+
+                </div>
+            </div>
+        `;
+        html5+= `|__Cant:_${element.cantidad}_${element.nombre}_$_${element.precio}__|`;
+    });
+
+    precioTotal = `<p>Total:$${data.info.total}</p>`;
+    Comprar = ` </br><div class="btnC">gracias por su compra</div>`;
+    Comprar += `<a href="https://wa.me/543765059161?text=%20Mi%20compra%20es:%20`+html5+`%20Cantidad%20Productos:%20${data.info.count}%20-%20TOTAL:%20$%20${data.info.total}%20" target="_blank"   class="btnConf"> confirmar </a>`;
+    Comprar +=`<a href="http://localhost/sistema/respaldoProntoya/carroCompras/lib/logout.php" class="btnConf">Vaciar Carrito </a>`
+  
+    tablaCont.innerHTML = Comprar + precioTotal + html;
+    console.log(data);
+   
+    document.cookie = `items=${data.info.count}`;
+    document.querySelector('.btn-carrito').innerHTML = `(${data.info.count}) Carrito`;
+        
+     
+};
+
  
