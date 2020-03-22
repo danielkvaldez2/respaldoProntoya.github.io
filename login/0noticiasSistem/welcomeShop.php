@@ -127,8 +127,8 @@
 			<?php	} else {
 				 ?>    <tr  >	
 		<?php }	?>	
-				<td class="text-center"><img  height="40px" src="../../carroCompras/img/productos/miniatura/Shop_Mini_<?php echo $row['strProdImagen']; ?>"></td>	
-				<td class="text-center"> <?php echo $row['id_categProd']; ?> </td>
+				<td class="text-center"><img  height="40px" src="../../comprasOnline/img/productos/miniatura/Shop_Mini_<?php echo $row['strProdImagen']; ?>"></td>	
+				<td class="text-center"> <?php echo $row['id_categProd']; ?> </td> 
 				<td class="text-center">
 					<div class="qg-<?php echo $row['id_categProd']; ?> bg-<?php echo $row['id_categProd']; ?>" > X </div>
 				</td>

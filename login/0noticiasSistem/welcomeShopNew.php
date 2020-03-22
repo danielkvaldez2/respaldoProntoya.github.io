@@ -260,7 +260,7 @@ $(document).ready(function() {
    var formData;//variable global
 		$('#respuesta').hover(
 			function() {
-				$(this).find('a').fadeIn();
+				$(this).find('a').fadeIn(); 
 			}, function() {
 				$(this).find('a').fadeOut();
 		});

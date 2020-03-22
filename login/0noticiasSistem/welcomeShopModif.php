@@ -145,11 +145,11 @@
 			<input type="hidden" value="<?php echo $row['id_producto']; ?>" name="id" id="id" >
 
 
-			<div class="shadow p-3 mb-5 bg-white rounded">
+			<div class="shadow p-3 mb-5 bg-white rounded"> 
 			
 			    <div id="respuesta" class="thumbnail">  <!-- preview * respuestao -->
 					<a href="#" id="file-select" class="btn1 default" title="Seleccionar Imagen JPEG - PNG">+ Seleccionar Imagen</a>
-					<img src="../../carroCompras/img/productos/miniatura/Shop_Mini_<?php echo $row['strProdImagen']; ?>"/>
+					<img src="../../comprasOnline/img/productos/miniatura/Shop_Mini_<?php echo $row['strProdImagen']; ?>"/>
 				</div>
 				<span  id="file-info" class="btn1 default">No hay archivo aún</span>
 
@@ -266,7 +266,7 @@
 	})
 </script>
 
-<script type = 'text/javascript' src = 'https://platform-api.sharethis.com/js/sharethis.js#property=5e4bd4faeac6ff0012aa5888&product=inline-share-buttons' async = 'async'> </script>
+<script type = 'text/javascript' src = 'https://platform-api.sharethis.com/js/sharethis.js#property=5e4bd4faeac6ff0012aa5888&product=inline-share-buttons' async = 'async'> </script> 
 
 
 <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>

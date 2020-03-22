@@ -19,7 +19,7 @@
 	$id_categProd = $mysqli->real_escape_string($_POST['id_categProd']);
 	$id_subcategProd = $mysqli->real_escape_string($_POST['id_subcategProd']);
 	$strOferta = $mysqli->real_escape_string($_POST['strOferta']);
-	$userModif = $mysqli->real_escape_string($_POST['userModif']);
+	$userModif = $mysqli->real_escape_string($_POST['userModif']); 
 
 	$archivo1 = $_FILES["imagen"]["name"]; 
 //var_dump($_POST);
@@ -43,7 +43,7 @@
 	  $dimensiones = getImageSize($ruta_provisional);
 	  $width = $dimensiones[0];
 	  $height = $dimensiones[1];
-	  $carpeta = "../../carroCompras/img/productos/";
+	  $carpeta = "../../comprasOnline/img/productos/";
 	   
 		  $ancho = 150;
 		  if ($ancho < $width) 
@@ -83,7 +83,7 @@
 			 
   
 		  }else{
-			$carpeta = "../../carroCompras/img/productos/";
+			$carpeta = "../../comprasOnline/img/productos/";
 			$nombre = $_FILES["imagen"]["name"];
 			$name01 = "Shop_Orig_$nombre" ;
 			$name02 = "Shop_Mini_$nombre" ;

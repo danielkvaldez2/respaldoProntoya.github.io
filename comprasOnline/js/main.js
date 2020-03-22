@@ -160,7 +160,7 @@ const comprarItemsFromCarrito = data =>{
     console.log(data);
    
     document.cookie = `items=${data.info.count}`;
-    document.querySelector('.btn-carrito').innerHTML = ` ${data.info.count}  <img scr="http://localhost/sistema/respaldoProntoya/img/carroCompra.png">`;
+    document.querySelector('.btn-carrito').innerHTML = ` ${data.info.count} <img scr="http://localhost/sistema/respaldoProntoya/img/carroCompra.png">`;
         
     
 };
