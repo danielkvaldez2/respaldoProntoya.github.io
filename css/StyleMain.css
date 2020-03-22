@@ -1,5 +1,5 @@
 body {
-    background-color:#CF0006;
+    background-color:#D50101;
 }
 .card {
     min-width: 18rem;
@@ -12,21 +12,46 @@ body {
 
 /*****************************  whatsappHeavy  **********************************/
 
-.whatsappHeavy{  
-	position: fixed;
-	bottom: 10px;
-	right: 10px;
-	width: 50px;
-	height: 50px;
-	border-radius: 20px;
-	z-index: 99999;
+.whatsappHeavy  {  
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    z-index: 99999;
     background-color: transparent;
     vertical-align: middle;
     text-align: center;
 }
+.verCarroCompras{ 
+    position: fixed;
+    top: 90px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 20px;
+    z-index: 99999;
+    background-color: transparent;
+    vertical-align: middle;
+    text-align: center;
+}
+.verCarroCompras>a>img {
+   width: 35px;
+   height: 35px;
+}
+.verCarroCompras>a>img:hover {
+  width: 44px;
+  height: 44px;
+  transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
 .whatsappHeavy>a>.WhatAImg {
     width: 40px;
-	height: 40px;
+	  height: 40px;
 }
 .whatsappHeavy>a>.WhatAImg:hover {
     width: 49px;
@@ -112,8 +137,9 @@ body {
 }
 .carroContainerShop {
     display: inline-block;
+    position: relative;
     width: 280px;
-    height: 400px;
+    height: 350px;
     margin: 20px;
     background-color:white ;
     overflow: hidden;
@@ -129,13 +155,23 @@ body {
   -ms-transition: all .5s ease-out;
   -o-transition: all .5s ease-out;
 }
-.carroContainerShop img {
+.carroContainerShopIMG{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  /*background-color:#D50101;*/
+  overflow: hidden;
+}
+
+.carroContainerShop .carroContainerShopIMG .imgGira {
     height: 180px;
     object-fit: cover;
     box-sizing: border-box;
-    margin: 15px;
+    margin: 0 auto;
 }
-.carroContainerShop img:hover {
+.carroContainerShop .carroContainerShopIMG .imgGira:hover {
   -webkit-transform: rotateY(180deg);
   -webkit-transform-style: preserve-3d;
   transform: rotateY(180deg);
@@ -147,39 +183,229 @@ body {
   -o-transition: all .5s ease-out;
 }
 
+.carroContainerShoptextImp{
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  /*background-color:#D50101;*/
+  overflow: hidden;
+}
+
+
+.importeComp
+{	 
+  width: 100%; height: 25px;
+	font-weight: bold;
+	font-size:1.5em;
+	color: #000;
+/*text-shadow: 1px 1px 3px rgba(0,0,0,.8); */
+}
+.importeComp > span{
+  position: absolute;
+  top: 271px ;
+  left: 0px;
+  display: block;
+  padding:8px;
+  width:190px;
+  background: #FFC107;/* /*orange;*/
+  color: black; 
+  border-radius: 0 30px 30px 0;
+    border: thin solid white;
+    box-shadow:inset 0px 1px 3px rgba(0,0,0,.7), 0 2px 4px rgba(0,0,0,.9);
+}
+
+.imgbtnComprar {
+  z-index:100;
+  position: absolute;
+  top: 280px ;
+  left: 140px;
+  width: 40px;
+  height: 40px;
+}
+.imgbtnComprar:hover{
+  transform: scale(0.8);
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+}
 /*****************************endcontenedor carro*******************************************/
+
+#carrito-container{
+  width: 490px;
+  max-height: 500px;
+  background: white;
+  border: solid 1px #000;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  margin-top: 5px;
+  display: none;
+  overflow:scroll;
+  scrollbar-color:red ;
+}
+
+#tabla .fila{
+  box-sizing: border-box;
+  padding: 10px 0;
+  background-color: rgba(255, 0, 7, 0.05);
+  margin-bottom: 3px;
+  width: 100%;
+  height: 65px;
+  position: relative;
+}
+
+#tabla .fila .imagen{
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+
+}
+#tabla .fila .info{
+  box-sizing: border-box;
+  font-size: 10px;
+  display: inline-block;
+  padding-left: 20px;
+  vertical-align: top;
+  width: 320px;
+}
+
+#tabla .fila .info .nombre{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#tabla .fila .info .botones{
+  padding: 3px ;
+}
+
+.btn-remove{
+ position: absolute;
+ top: 10px;
+ right: 10px;
+}
+.btnadd{
+  position: absolute;
+  top: 10px;
+  right: 60px;
+}
+
+
+
+#tabla p{
+  font-size: 24px !important;
+  text-align: center;
+  font-weight: bold; 
+}
+
+/**********************************************************/
+.btnC, .btnConf, .btnConY, .btnMini {
+  width: 250px;    
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  background-color: rgb(112, 2, 70);
+  color: white;
+  border-radius: 10px ;
+  margin: 0 auto ;
+  padding: 10px;
+  vertical-align: middle;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.btnMini{
+  font-size: .7em;
+}
+.btnConf {
+  text-decoration: none;
+  background-color:rgb(18, 165, 4); 
+  margin-right: 30px;
+}
+.btnConY {
+  text-decoration: none;
+  background-color:rgb(196, 165, 31); 
+  margin-right: 30px;
+}
+ 
+.btn-carrito{
+  z-index: 99999;
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+  border-radius: 12.5px;
+  background-color: black;
+  color: white;
+
+}
+.btnC:hover, .btnConf:hover , .btn-carrito:hover, .btnConY:hover {
+  text-decoration: none;
+  transform: scale(1.02);
+ -moz-transform: scale(1.02);
+ -ms-transform: scale(1.02);
+ -webkit-transform: scale(1.02);
+ cursor: pointer;
+}
 
  /************************************ start  ventana modal *********************************/
 
-#bg-windows{
+ #bg-windows{
   position: fixed;
-  background-color: rgba(255, 0, 7, 0.5);
+  background-color: rgba(61, 54, 55, 0.5); 
   width: 100%;
   height: 100%;
-  top: 0;
+  top:70px;
   left: 0;
-  z-index: 99997;
-  /*visibility: hidden;*/
+  z-index: 99995;
+   visibility: hidden;  
 }
 .bg-windows-Content{
-   position: absolute;
-   width: 420px;
-   max-height: 600px;
-   top: 50%;
-   left: 50%;
-   margin: auto;
+   position: relative;
+   width: 80%;
+   min-height: 400px;
+   max-height: 420px;
+   top: 10%;
+   left:10%;
+    overflow:  scroll;
+   background-color:white ;
+   text-transform: uppercase;
+   padding-left: 10px;
+   border-radius: 5px;
+  
 }
+
 .bg-windows-Content-exit {
    position: absolute;
-   width: 40px;
-   height: 40px;
-   z-index: 99998;
-   top: 0;
-   right: 0;
-   margin-top: -20px;
-   margin-right: -20px;
+   width: 10px;
+   height: 10px;
+   z-index: 99999;
+   top:  5px;
+   left:  5px;
+   margin-top: 0px;
+   margin-right: 0px;
+}
+.bg-windows-Content-exit .dimens{
+  width: 28px;
+  height: 28px;
 }
 .bg-windows-Content-exit:hover {
-   transform: scale(1.1);
+   transform: scale(0.9);
+   cursor: pointer;
 }
 /************************************ end ventana modal *********************************/
+@media only screen and (max-width: 600px){
+    #tabla .fila .info{  
+      font-size: 10px;
+      padding-left: 10px;
+      width: 180px;
+      /*background-color: aqua;*/
+    }
+
+    #tabla .fila .info .nombre{
+      font-size: 12px;
+      
+    }
+}

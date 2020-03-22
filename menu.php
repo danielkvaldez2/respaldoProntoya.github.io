@@ -9,7 +9,7 @@
         <a class="nav-item nav-link " href="index.php">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-        <a class="nav-item nav-link active" href="compras.php">Comprar</a>
+        <a class="nav-item nav-link active" href="compras.php">Compra ONLINE</a>
         </li>
         <li class="nav-item">
         <a class="nav-item nav-link" href="comidas.php">Comidas</a>
@@ -29,19 +29,22 @@
 
 </br></br></br> 
 
-            <!-- Div WHATSAPP -->
-            <div class="whatsappHeavy"> 
-                          <a href="https://wa.me/543765059161?text=Me%20gustaría%20que%20me%20envien%20" target="_blank" >
-                          <img src="img/whatsapp.png" class="WhatAImg"  alt="" title="comunicate con el Local" >
-                        </a>
-                </div> 
-            <!-- end Div WHATSAPP --> 
+           
+
             
             <!-- Div IrArriba -->
                 <div id="IrArriba">
                   <a href="javascript:void(0);" title="Scroll Up"><span></span></a>
                 </div>           
             <!-- end Div IrArriba -->
+
+              <!-- Div WHATSAPP -->
+              <div class="whatsappHeavy"> 
+                          <a href="https://wa.me/543765059161?text=Me%20gustaría%20que%20me%20envien%20" target="_blank" >
+                          <img src="img/whatsapp.png" class="WhatAImg"  alt="" title="comunicate con el Local" >
+                        </a>
+                </div> 
+            <!-- end Div WHATSAPP --> 
 
 
 

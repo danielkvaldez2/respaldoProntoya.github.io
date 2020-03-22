@@ -10,7 +10,8 @@ if(isset($_GET['categoria'])){
                             'response' => 'No existe la categor&iacute;a']);    
     }else{
         $productos = new Productos();
-        $items = $productos->getItemsByCategory($categoria);
+        //$items = $productos->getItemsByCategory($categoria);
+        $items = $productos->getall();
         echo json_encode(['statuscode' => 200, 
                         'items' => $items]);
     }

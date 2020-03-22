@@ -6,6 +6,6 @@
       unset($_SESSION['items']);
       session_destroy();
       $items = array_values($items);
-     header("location: ../inicio.php");
+     header("location: ../../compras.php");
 
 ?>

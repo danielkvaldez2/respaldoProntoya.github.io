@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () =>{
     if(cookie != null){
         const count = cookie.split('=')[1];
         console.log(count);
-        document.querySelector('.btn-carrito').innerHTML = `(${count}) Carrito`;
+        document.querySelector('.btn-carrito').innerHTML = ` ${count}  <img scr="http://localhost/sistema/respaldoProntoya/img/carroCompra.png">`;
     }
 })
  
-const bCarrito = document.querySelector('.btn-carrito'); //in out window carrito
+const bCarrito = document.querySelector('.btn-carrito'); //in out window carrito 
 
 bCarrito.addEventListener('click', (e) =>{
     e.preventDefault();
@@ -33,7 +33,7 @@ bCarrito.addEventListener('click', (e) =>{
 
 
 function actualizarCarritoUI(){
-    fetch('http://localhost/sistema/respaldoProntoya/carroCompras/api/carrito/api-carrito.php?action=mostrar')
+    fetch('http://localhost/sistema/respaldoProntoya/comprasOnline/api/carrito/api-carrito.php?action=mostrar')
     .then(response =>{
         return response.json();
     })
@@ -46,7 +46,7 @@ function actualizarCarritoUI(){
             html += `
                 <div class='fila'>
                     <div class='imagen'>
-                      <img src='img/productos/miniatura/Shop_Mini_${element.imagen}' height='50' width='50' />
+                      <img src='http://localhost/sistema/respaldoProntoya/comprasOnline/img/productos/miniatura/Shop_Mini_${element.imagen}' height='50' width='50' />
                     </div>
                     <div class='info'>
                         <input type='hidden' value='${element.id}' />
@@ -63,12 +63,12 @@ function actualizarCarritoUI(){
         });
 
         Comprar = ` </br>`;
-        Comprar += `<div class="btnC">comprar</div>`;
+        Comprar += `<div class="btnC" title="Finalizar Compra">comprar</div>`;
         precioTotal = `<p>Total: $${data.info.total}</p>`;
         tablaCont.innerHTML = Comprar + precioTotal + html;
         //cookie obtiene nro elementos 
         document.cookie = `items=${data.info.count}`;
-        document.querySelector('.btn-carrito').innerHTML = `(${data.info.count}) Carrito`;
+        document.querySelector('.btn-carrito').innerHTML = ` ${data.info.count}  <img scr="http://localhost/sistema/respaldoProntoya/img/carroCompra.png">`;
 
         document.querySelectorAll('.btn-add').forEach(boton =>{
             boton.addEventListener('click', () => {
@@ -104,7 +104,7 @@ botones.forEach(boton => {
 });
 
 const addItemToCarrito = id =>{
-    fetch('http://localhost/sistema/respaldoProntoya/carroCompras/api/carrito/api-carrito.php?action=add&id=' + id)
+    fetch('http://localhost/sistema/respaldoProntoya/comprasOnline/api/carrito/api-carrito.php?action=add&id=' + id)
     .then(response =>{
         return response.text();
     })
@@ -114,7 +114,7 @@ const addItemToCarrito = id =>{
 };
 
 const removeItemFromCarrito = id =>{
-    fetch('http://localhost/sistema/respaldoProntoya/carroCompras/api/carrito/api-carrito.php?action=remove&id=' + id)
+    fetch('http://localhost/sistema/respaldoProntoya/comprasOnline/api/carrito/api-carrito.php?action=remove&id=' + id)
     .then(res =>{
         return res.json();
     })
@@ -134,7 +134,7 @@ const comprarItemsFromCarrito = data =>{
         html += `
             <div class='fila'>
                 <div class='imagen'>
-                  <img src='img/productos/miniatura/Shop_Mini_${element.imagen}' height='50' width='50' />
+                  <img src='http://localhost/sistema/respaldoProntoya/comprasOnline/img/productos/miniatura/Shop_Mini_${element.imagen}' height='50' width='50' />
                 </div>
                 <div class='info'>
                   
@@ -149,18 +149,20 @@ const comprarItemsFromCarrito = data =>{
         html5+= `|__Cant:_${element.cantidad}_${element.nombre}_$_${element.precio}__|`;
     });
 
-    precioTotal = `<p>Total:$${data.info.total}</p>`;
-    Comprar = ` </br><div class="btnC">gracias por su compra</div>`;
-    Comprar += `<a href="https://wa.me/543765059161?text=%20Mi%20compra%20es:%20`+html5+`%20Cantidad%20Productos:%20${data.info.count}%20-%20TOTAL:%20$%20${data.info.total}%20" target="_blank"   class="btnConf"> confirmar </a>`;
-    Comprar +=`<a href="http://localhost/sistema/respaldoProntoya/carroCompras/lib/logout.php" class="btnConf">Vaciar Carrito </a>`
-  
+   
+    Comprar = ` </br><div class="btnC">gracias por su compra</div> `;
+    Comprar += `  <div class="btnMini">el importe $${data.info.total} sera confirmado cuando se confeccione el pedido </div></br></br>`;
+    Comprar += `<a href="https://wa.me/543765059161?text=%20Mi%20compra%20es:%20`+html5+`%20Cantidad%20Productos:%20${data.info.count}%20-%20TOTAL:%20$%20${data.info.total}%20" target="_blank"   class="btnConf" title="Confirmar pedido por whatsapp"> confirmar </a>`;
+    Comprar +=`<a href="http://localhost/sistema/respaldoProntoya/comprasOnline/lib/logout.php" class="btnConY" title="Vaciar Carrito sin comprar">Vaciar Carrito </a>`
+    precioTotal = `</br><p>Total:$${data.info.total}</p>`;
+
     tablaCont.innerHTML = Comprar + precioTotal + html;
     console.log(data);
    
     document.cookie = `items=${data.info.count}`;
-    document.querySelector('.btn-carrito').innerHTML = `(${data.info.count}) Carrito`;
+    document.querySelector('.btn-carrito').innerHTML = ` ${data.info.count}  <img scr="http://localhost/sistema/respaldoProntoya/img/carroCompra.png">`;
         
-     
+    
 };
 
  
